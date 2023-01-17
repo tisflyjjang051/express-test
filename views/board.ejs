@@ -1,0 +1,27 @@
+<%- include("./include/header.ejs") %>
+<h2><%= title %></h2>
+<ul>
+  <% for(let i=0;i<list.length;i++) { %>
+  <li>
+    <span><%= list[i].no %></span>
+    <p><%=list[i].title%></p>
+    <span><%=list[i].writer%></span>
+    <span><%=list[i].date%></span>
+    <span><%=list[i].hit%></span>
+  </li>
+  <% } %>
+  
+</ul>
+<ul>
+  <!-- 배열 반복문 -->
+  <% list.forEach(function(item){ %>
+    <li>
+      <span><%= item.no %></span>   
+      <span><%= item.title %></span>   
+      <span><%= item.writer %></span>   
+      <span><%= item.date %></span>   
+      <span><%= item.hit %></span>   
+    </li>    
+ <% })  %>
+</ul>
+<%- include("./include/footer.ejs") %>
